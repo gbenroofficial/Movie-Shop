@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.contact">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="FIRST NAME:" />
+            <Entry x:Name="firstName_hard" Placeholder="first name"/>
+            <Label Text="LAST NAME:"/>
+            <Entry x:Name="lastName_hard" Placeholder="last name"/>
+            <Label Text="EMAIL ADDRESS:"/>
+            <Entry x:Name="email_hard" Placeholder="email address"/>
+            <Label Text="DELIVERY ADDRESS:"/>
+            <Entry x:Name="address_hard" Placeholder="delivery address"/>
+            <Button x:Name="submitHard" Text="Submit" Clicked="submitHard_Clicked"/>
+            <Button x:Name="cancelHard" Text="Cancel" Clicked="cancelHard_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

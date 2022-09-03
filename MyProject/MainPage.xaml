@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.MainPage">
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal">            
+            <Label Text="MOVIE SHOP" FontSize="23" TextColor="Red" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" FontAttributes="Bold">
+            </Label>
+
+            <ImageButton x:Name="cartIcon" HeightRequest="30"  VerticalOptions="Center" HorizontalOptions="End" Clicked="cartIcon_Clicked"></ImageButton>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout BackgroundColor="black">
+        
+        
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+
+                <!--ACTION-->
+                <Label Text="ACTION" FontAttributes="Bold" TextColor="white" FontSize="Medium" ></Label>
+                <ScrollView Orientation="Horizontal">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Action Movies-->
+                        <ImageButton Grid.Column="0" x:Name="action1" VerticalOptions="Start" Clicked="action1_Clicked"/>
+                        <Label x:Name="jokerLabel" Grid.Column="0" Text="The Joker" TextColor="White" VerticalOptions="End" 
+                           BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+                        
+                        
+                        
+
+                        <ImageButton Grid.Column="1" x:Name="action2" VerticalOptions="Start" Clicked="action2_Clicked"/>
+                        <Label Grid.Column="1" Text="Spider man" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>                       
+
+                        
+                    </Grid>
+                </ScrollView>
+                
+                <!--Animation-->
+                <Label Text="ANIMATION" FontAttributes="Bold" TextColor="white" FontSize="Medium" ></Label>
+                <ScrollView Orientation="Horizontal">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            
+                            
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Animation Movies-->
+                        <ImageButton Grid.Column="0" x:Name="animation1" HeightRequest="90" VerticalOptions="Start" Clicked="animation1_Clicked"/>
+                        <Label Grid.Column="0" Text="Frozen" TextColor="White" VerticalOptions="End" 
+                           BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton Grid.Column="1" x:Name="animation2" HeightRequest="90" VerticalOptions="Start" Clicked="animation2_Clicked"/>
+                        <Label Grid.Column="1" Text="Spiderman:ISPV" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        
+
+                    </Grid>
+                </ScrollView>
+                
+                <!--COMEDY-->
+                <Label Text="COMEDY" FontAttributes="Bold" TextColor="white" FontSize="Medium" ></Label>
+
+                <ScrollView Orientation="Horizontal">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Comedy Movies-->
+                        <ImageButton Grid.Column="0" x:Name="comedy1" HeightRequest="100" VerticalOptions="Start" Clicked="comedy1_Clicked"/>
+                        <Label Grid.Column="0" Text="Why Him?" TextColor="White" VerticalOptions="End" 
+                           BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton Grid.Column="1" x:Name="comedy2" HeightRequest="90" VerticalOptions="Start" Clicked="comedy2_Clicked"/>
+                        <Label Grid.Column="1" Text="Hangover 2" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton Grid.Column="2" x:Name="comedy3" VerticalOptions="Start" Clicked="comedy3_Clicked"/>
+                        <Label Grid.Column="2" Text="Neighbors" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton Grid.Column="3" x:Name="comedy4" VerticalOptions="Start" Clicked="comedy4_Clicked"/>
+                        <Label Grid.Column="3" Text="Three Idiots" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton Grid.Column="4" x:Name="comedy5" VerticalOptions="Start" Clicked="comedy5_Clicked"/>
+                        <Label Grid.Column="4" Text="21 Jump Street" TextColor="White" VerticalOptions="End"
+                            BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+
+
+
+                    </Grid>
+                </ScrollView>
+
+                <!--DRAMA-->
+                <Label x:Name="dramaLabel" Text="DRAMA" FontSize="Medium" TextColor="White" FontAttributes="Bold"></Label>
+                <ScrollView Orientation="Horizontal">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <!--Drama Movies-->
+                        <ImageButton Grid.Column="0" x:Name="drama1" VerticalOptions="Start" Clicked="drama1_Clicked"/>
+                        <Label Grid.Column="0" Text="The Photograph" TextColor="White" VerticalOptions="End" 
+                           BackgroundColor="Black" HorizontalTextAlignment="Center"/>
+
+                    </Grid>
+                </ScrollView>
+
+            </StackLayout>
+
+        </ScrollView>  
+
+
+
+    </StackLayout>
+        
+    
+</ContentPage>

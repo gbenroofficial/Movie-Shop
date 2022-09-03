@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.Cart">
+    <ContentPage.Content>
+        <StackLayout  VerticalOptions="Start">
+            <Label Text="CART" TextColor="Blue" FontSize="Large"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="(Soft copies are half price of hard copies)" HorizontalOptions="Center"/>
+            <AbsoluteLayout>
+                <Label Text="Movie Name" AbsoluteLayout.LayoutBounds="0,0" FontSize="20" FontAttributes="Bold"/>
+                <Label Text="£/day" AbsoluteLayout.LayoutBounds="160,0" FontSize="20" FontAttributes="Bold"/>
+                <Label Text="Day(s)" AbsoluteLayout.LayoutBounds="280,0" FontSize="20" FontAttributes="Bold"/>
+                
+            </AbsoluteLayout>
+
+            <ListView x:Name= "purchasedItems">                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <AbsoluteLayout>
+                                <Label Text="{Binding MovieName}" FontSize="20" AbsoluteLayout.LayoutBounds="0,0" />
+                                <Label Text="{Binding Ppd}" AbsoluteLayout.LayoutBounds="160,0" FontSize="20"/>
+                                <Entry Text="{Binding Path=Days, Mode=TwoWay}" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="280,0" FontSize="20"/>
+                                <!--<Label Text="{Binding Days}" AbsoluteLayout.LayoutBounds="290,0" FontSize="20"/>-->
+                                <Button Text="Delete" CommandParameter="{Binding MovieName, Mode=TwoWay}" Clicked="itemDelete_Clicked" AbsoluteLayout.LayoutBounds="330, 0"></Button>
+                            </AbsoluteLayout>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView >
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="TOTAL:" />
+                </StackLayout>            
+                
+                <StackLayout Orientation="Horizontal">
+                    
+                    
+                    <Label x:Name="showTotal" FontSize="14" TextColor="Blue"/>
+                    <Label x:Name="showSoftTotal" FontSize="14" TextColor="Blue"/>
+                    <AbsoluteLayout>
+                        <Entry x:Name="voucher" Placeholder="ENTER VOUCHER" AbsoluteLayout.LayoutBounds="100, 0"/>
+                    </AbsoluteLayout>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                
+                <Button x:Name="pay" Text="pay" VerticalOptions="End" HorizontalOptions="End"  Clicked="pay_Clicked">
+                    
+                </Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
